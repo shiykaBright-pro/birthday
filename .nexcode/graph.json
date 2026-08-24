@@ -1,0 +1,345 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-24T20:53:46.581Z",
+  "workspaceRoot": "bd",
+  "stats": {
+    "filesIndexed": 20,
+    "edgesIndexed": 17
+  },
+  "nodes": [
+    {
+      "id": "index.html",
+      "path": "index.html",
+      "lang": "html",
+      "summary": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\" /> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /> <title>Happy Birthday, Dad</title>",
+      "imports": [],
+      "exports": []
+    },
+    {
+      "id": "package.json",
+      "path": "package.json",
+      "lang": "json",
+      "summary": "{ \"name\": \"birthday-surprise-dad\", \"version\": \"1.0.0\", \"private\": true, \"scripts\": { \"dev\": \"vite\",",
+      "imports": [],
+      "exports": []
+    },
+    {
+      "id": "README.md",
+      "path": "README.md",
+      "lang": "md",
+      "summary": "# Birthday Surprise — React + Vite A lightweight interactive birthday surprise website built with React, Vite, Framer Motion and react-confetti. Quick start: ```bash npm install npm run dev",
+      "imports": [],
+      "exports": []
+    },
+    {
+      "id": "vite.config.js",
+      "path": "vite.config.js",
+      "lang": "js",
+      "summary": "import { defineConfig } from 'vite' import react from '@vitejs/plugin-react' export default defineConfig({ plugins: [react()] })",
+      "imports": [
+        "vite",
+        "@vitejs/plugin-react"
+      ],
+      "exports": []
+    },
+    {
+      "id": "src/App.jsx",
+      "path": "src/App.jsx",
+      "lang": "jsx",
+      "summary": "import React, { useState } from 'react' import OpeningScreen from './components/OpeningScreen' import SurpriseReveal from './components/SurpriseReveal' import IntroSection from './components/IntroSection' import BirthdayMessage from './comp",
+      "imports": [
+        "react",
+        "./components/OpeningScreen",
+        "./components/SurpriseReveal",
+        "./components/IntroSection",
+        "./components/BirthdayMessage",
+        "./components/SpecialReasons",
+        "./components/MemoryReveal",
+        "./components/HiddenSurprises",
+        "./components/BirthdayWishes",
+        "./components/FinalSurprise",
+        "./components/MusicPlayer",
+        "./components/Footer"
+      ],
+      "exports": [
+        "App"
+      ]
+    },
+    {
+      "id": "src/main.jsx",
+      "path": "src/main.jsx",
+      "lang": "jsx",
+      "summary": "import React from 'react' import { createRoot } from 'react-dom/client' import App from './App' import './styles/global.css' createRoot(document.getElementById('root')).render( <React.StrictMode>",
+      "imports": [
+        "react",
+        "react-dom/client",
+        "./App"
+      ],
+      "exports": []
+    },
+    {
+      "id": "public/assets/README.md",
+      "path": "public/assets/README.md",
+      "lang": "md",
+      "summary": "Place an audio file named `music.mp3` here to enable the optional music player. Example: - public/assets/music.mp3 The app will not autoplay audio; use the player control at the top-right.",
+      "imports": [],
+      "exports": []
+    },
+    {
+      "id": "src/components/BirthdayMessage.jsx",
+      "path": "src/components/BirthdayMessage.jsx",
+      "lang": "jsx",
+      "summary": "import React from 'react' import { motion } from 'framer-motion' import { birthdayMessage } from '../data/content' export default function BirthdayMessage({ onContinue }) { return ( <section className=\"birthday-message\">",
+      "imports": [
+        "react",
+        "framer-motion",
+        "../data/content"
+      ],
+      "exports": [
+        "BirthdayMessage"
+      ]
+    },
+    {
+      "id": "src/components/BirthdayWishes.jsx",
+      "path": "src/components/BirthdayWishes.jsx",
+      "lang": "jsx",
+      "summary": "import React, { useState } from 'react' import { motion } from 'framer-motion' import { wishes as wishesData } from '../data/content' export default function BirthdayWishes({ onContinue }) { const [idx, setIdx] = useState(0) return (",
+      "imports": [
+        "react",
+        "framer-motion",
+        "../data/content"
+      ],
+      "exports": [
+        "BirthdayWishes"
+      ]
+    },
+    {
+      "id": "src/components/FinalSurprise.jsx",
+      "path": "src/components/FinalSurprise.jsx",
+      "lang": "jsx",
+      "summary": "import React from 'react' import { motion } from 'framer-motion' import Confetti from 'react-confetti' export default function FinalSurprise({ revealed, onReset }) { const [showConfetti, setShowConfetti] = React.useState(false) React.useEff",
+      "imports": [
+        "react",
+        "framer-motion",
+        "react-confetti"
+      ],
+      "exports": [
+        "FinalSurprise"
+      ]
+    },
+    {
+      "id": "src/components/Footer.jsx",
+      "path": "src/components/Footer.jsx",
+      "lang": "jsx",
+      "summary": "import React from 'react' export default function Footer() { return ( <footer className=\"site-footer\"> <p className=\"muted\">Made with ❤️ — A surprise for Dad</p> </footer>",
+      "imports": [
+        "react"
+      ],
+      "exports": [
+        "Footer"
+      ]
+    },
+    {
+      "id": "src/components/HiddenSurprises.jsx",
+      "path": "src/components/HiddenSurprises.jsx",
+      "lang": "jsx",
+      "summary": "import React, { useState } from 'react' import { motion } from 'framer-motion' import { hiddenSurprises } from '../data/content' export default function HiddenSurprises({ onContinue }) { const [revealed, setRevealed] = useState(hiddenSurpri",
+      "imports": [
+        "react",
+        "framer-motion",
+        "../data/content"
+      ],
+      "exports": [
+        "HiddenSurprises"
+      ]
+    },
+    {
+      "id": "src/components/IntroSection.jsx",
+      "path": "src/components/IntroSection.jsx",
+      "lang": "jsx",
+      "summary": "import React from 'react' import { motion } from 'framer-motion' export default function IntroSection({ onContinue }) { return ( <section className=\"intro-section\"> <motion.h3 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ ",
+      "imports": [
+        "react",
+        "framer-motion"
+      ],
+      "exports": [
+        "IntroSection"
+      ]
+    },
+    {
+      "id": "src/components/MemoryReveal.jsx",
+      "path": "src/components/MemoryReveal.jsx",
+      "lang": "jsx",
+      "summary": "import React, { useState } from 'react' import { motion } from 'framer-motion' import { memories as memoriesData } from '../data/content' export default function MemoryReveal({ onContinue }) { const [visible, setVisible] = useState(0) retur",
+      "imports": [
+        "react",
+        "framer-motion",
+        "../data/content"
+      ],
+      "exports": [
+        "MemoryReveal"
+      ]
+    },
+    {
+      "id": "src/components/MusicPlayer.jsx",
+      "path": "src/components/MusicPlayer.jsx",
+      "lang": "jsx",
+      "summary": "import React, { useState, useRef } from 'react' export default function MusicPlayer() { const [playing, setPlaying] = useState(false) const audioRef = useRef(null) const toggle = () => { if (!audioRef.current) return",
+      "imports": [
+        "react"
+      ],
+      "exports": [
+        "MusicPlayer"
+      ]
+    },
+    {
+      "id": "src/components/OpeningScreen.jsx",
+      "path": "src/components/OpeningScreen.jsx",
+      "lang": "jsx",
+      "summary": "import React from 'react' import { motion } from 'framer-motion' export default function OpeningScreen({ onOpen }) { return ( <div className=\"opening-screen\"> <motion.div",
+      "imports": [
+        "react",
+        "framer-motion"
+      ],
+      "exports": [
+        "OpeningScreen"
+      ]
+    },
+    {
+      "id": "src/components/SpecialReasons.jsx",
+      "path": "src/components/SpecialReasons.jsx",
+      "lang": "jsx",
+      "summary": "import React, { useState } from 'react' import { motion } from 'framer-motion' import { specialReasons } from '../data/content' export default function SpecialReasons({ onContinue }) { const [active, setActive] = useState(null) return (",
+      "imports": [
+        "react",
+        "framer-motion",
+        "../data/content"
+      ],
+      "exports": [
+        "SpecialReasons"
+      ]
+    },
+    {
+      "id": "src/components/SurpriseReveal.jsx",
+      "path": "src/components/SurpriseReveal.jsx",
+      "lang": "jsx",
+      "summary": "import React from 'react' import { motion } from 'framer-motion' export default function SurpriseReveal({ onContinue }) { return ( <section className=\"surprise-reveal\"> <motion.h2",
+      "imports": [
+        "react",
+        "framer-motion"
+      ],
+      "exports": [
+        "SurpriseReveal"
+      ]
+    },
+    {
+      "id": "src/data/content.js",
+      "path": "src/data/content.js",
+      "lang": "js",
+      "summary": "export const birthdayMessage = `Happy Birthday to the most amazing father! Today, I celebrate not just your birthday, but the incredible person you are. Thank you for your love, guidance, sacrifices, and for always being there for us. Your ",
+      "imports": [],
+      "exports": [
+        "birthdayMessage",
+        "specialReasons",
+        "memories",
+        "hiddenSurprises",
+        "wishes"
+      ]
+    },
+    {
+      "id": "src/styles/global.css",
+      "path": "src/styles/global.css",
+      "lang": "css",
+      "summary": ":root{--bg:#07102a;--panel:#0f1724;--accent:#d4af37;--muted:#cbd5e1;--cream:#f6f1eb} *{box-sizing:border-box} html,body,#root{height:100%} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Ne",
+      "imports": [],
+      "exports": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/OpeningScreen.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/SurpriseReveal.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/IntroSection.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/BirthdayMessage.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/SpecialReasons.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/MemoryReveal.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/HiddenSurprises.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/BirthdayWishes.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/FinalSurprise.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/MusicPlayer.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/Footer.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "src/App.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/components/BirthdayMessage.jsx",
+      "to": "src/data/content.js",
+      "type": "imports"
+    },
+    {
+      "from": "src/components/BirthdayWishes.jsx",
+      "to": "src/data/content.js",
+      "type": "imports"
+    },
+    {
+      "from": "src/components/HiddenSurprises.jsx",
+      "to": "src/data/content.js",
+      "type": "imports"
+    },
+    {
+      "from": "src/components/MemoryReveal.jsx",
+      "to": "src/data/content.js",
+      "type": "imports"
+    },
+    {
+      "from": "src/components/SpecialReasons.jsx",
+      "to": "src/data/content.js",
+      "type": "imports"
+    }
+  ]
+}

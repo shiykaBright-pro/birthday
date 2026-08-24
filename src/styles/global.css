@@ -1,0 +1,35 @@
+:root{--bg:#07102a;--panel:#0f1724;--accent:#d4af37;--muted:#cbd5e1;--cream:#f6f1eb}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:var(--cream);background:linear-gradient(180deg,#021022 0%, #07102a 60%);-webkit-font-smoothing:antialiased}
+.app-root{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.opening-screen{display:flex;align-items:center;justify-content:center;width:100%;max-width:900px}
+.opening-box{background:rgba(255,255,255,0.03);padding:48px;border-radius:12px;text-align:center;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+.opening-box h1{font-size:32px;margin:6px 0}
+.opening-box h3{font-weight:400;color:var(--muted)}
+.primary-btn{background:linear-gradient(90deg,var(--accent),#ffd77a);border:none;color:#091218;padding:12px 20px;border-radius:10px;font-weight:700;cursor:pointer;margin-top:18px}
+.ghost-btn{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:10px 14px;border-radius:8px;color:var(--cream);cursor:pointer}
+.muted{color:var(--muted)}
+.heart{font-size:20px}
+.main-flow{width:100%;max-width:900px;margin-top:18px}
+section{background:rgba(255,255,255,0.02);padding:28px;border-radius:12px;margin-bottom:18px}
+.surprise-reveal h2{font-size:24px;margin:0}
+.lead{margin-top:8px;color:var(--muted)}
+.intro-section h3{margin:0}
+.message-box{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:10px;margin-top:12px}
+.message-box p{line-height:1.45}
+.special-reasons .reasons-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:14px}
+.reason-card{background:rgba(255,255,255,0.01);padding:12px;border-radius:10px;cursor:pointer;overflow:hidden}
+.reason-card h4{margin:0}
+.reason-text p{margin:8px 0 0}
+.memory-reveal .memory-box{padding:12px}
+.surprises-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.surprise-card{flex:1 1 200px;background:rgba(255,255,255,0.02);padding:18px;border-radius:10px;min-height:120px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.wish-card{padding:18px;text-align:center}
+.final-surprise .final-prompt{text-align:center}
+.reveal-btn{background:transparent;border:2px solid var(--accent);color:var(--cream);padding:12px 18px;border-radius:12px;font-weight:700;cursor:pointer;margin-top:10px}
+.final-stage{text-align:center;padding:40px}
+.site-footer{text-align:center;margin-top:18px}
+.music-player{position:fixed;right:18px;top:18px}
+.music-btn{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:var(--cream);cursor:pointer}
+@media(max-width:620px){.opening-box{padding:28px}.app-root{padding:16px}.main-flow{margin-top:12px}}
