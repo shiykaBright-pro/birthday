@@ -41,3 +41,38 @@ export default {
   hiddenSurprises,
   wishes
 }
+
+// List of actual filenames in the project's `images` folder.
+export const images = [
+  '20250408_100520.jpg',
+  '20250408_100558.jpg',
+  'IMG-20201225-WA0026.jpg',
+  'IMG-20201225-WA0027.jpg',
+  'IMG-20201225-WA0036.jpg',
+  'IMG-20201225-WA0038.jpg',
+  'IMG-20201225-WA0049.jpg',
+  'IMG-20201225-WA0058.jpg',
+  'IMG-20240729-WA0093.jpg',
+  'IMG-20240729-WA0096.jpg',
+  'IMG-20240804-WA0044.jpg',
+  'IMG-20240826-WA0037.jpg',
+  'IMG-20240826-WA0038.jpg',
+  'IMG-20240826-WA0039.jpg',
+  'IMG-20240826-WA0042.jpg',
+  'IMG-20260825-WA0090.jpg',
+  'IMG-20260825-WA0091.jpg',
+  'IMG-20260825-WA0092.jpg',
+  'IMG-20260825-WA0093.jpg',
+  'IMG-20260825-WA0094.jpg',
+  'IMG-20260825-WA0095.jpg',
+  'IMG-20260825-WA0096.jpg',
+  'IMG-20260825-WA0097.jpg',
+  'IMG-20260825-WA0098.jpg',
+  'IMG-20260825-WA0099.jpg',
+  'IMG-20260825-WA0100.jpg',
+  'IMG_20220723_134507_1.jpg',
+  'IMG_20230101_082303_588.jpg',
+  'IMG_20230102_175803_035.jpg',
+  'IMG_20230717_101144_457.jpg',
+  'IMG_20230731_104541_742.jpg'
+]

@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-24T20:53:46.581Z",
+  "generatedAt": "2026-08-25T20:52:55.823Z",
   "workspaceRoot": "bd",
   "stats": {
-    "filesIndexed": 20,
-    "edgesIndexed": 17
+    "filesIndexed": 23,
+    "edgesIndexed": 20
   },
   "nodes": [
     {
@@ -12,6 +12,14 @@
       "path": "index.html",
       "lang": "html",
       "summary": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\" /> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /> <title>Happy Birthday, Dad</title>",
+      "imports": [],
+      "exports": []
+    },
+    {
+      "id": "package-lock.json",
+      "path": "package-lock.json",
+      "lang": "json",
+      "summary": "{ \"name\": \"birthday-surprise-dad\", \"version\": \"1.0.0\", \"lockfileVersion\": 3, \"requires\": true, \"packages\": {",
       "imports": [],
       "exports": []
     },
@@ -170,7 +178,7 @@
       "id": "src/components/MemoryReveal.jsx",
       "path": "src/components/MemoryReveal.jsx",
       "lang": "jsx",
-      "summary": "import React, { useState } from 'react' import { motion } from 'framer-motion' import { memories as memoriesData } from '../data/content' export default function MemoryReveal({ onContinue }) { const [visible, setVisible] = useState(0) retur",
+      "summary": "import React, { useState } from 'react' import { motion } from 'framer-motion' import { memories as memoriesData, images } from '../data/content' export default function MemoryReveal({ onContinue }) { const [visible, setVisible] = useState(",
       "imports": [
         "react",
         "framer-motion",
@@ -196,13 +204,42 @@
       "id": "src/components/OpeningScreen.jsx",
       "path": "src/components/OpeningScreen.jsx",
       "lang": "jsx",
-      "summary": "import React from 'react' import { motion } from 'framer-motion' export default function OpeningScreen({ onOpen }) { return ( <div className=\"opening-screen\"> <motion.div",
+      "summary": "import React from 'react' import { motion } from 'framer-motion' import { images } from '../data/content' export default function OpeningScreen({ onOpen }) { // choose the first strong portrait-like image as hero (fallback to first) const h",
+      "imports": [
+        "react",
+        "framer-motion",
+        "../data/content"
+      ],
+      "exports": [
+        "OpeningScreen"
+      ]
+    },
+    {
+      "id": "src/components/PhotoGallery.jsx",
+      "path": "src/components/PhotoGallery.jsx",
+      "lang": "jsx",
+      "summary": "import React, { useState } from 'react' import { motion } from 'framer-motion' import PhotoModal from './PhotoModal' import { images } from '../data/content' export default function PhotoGallery() { const [openIndex, setOpenIndex] = useStat",
+      "imports": [
+        "react",
+        "framer-motion",
+        "./PhotoModal",
+        "../data/content"
+      ],
+      "exports": [
+        "PhotoGallery"
+      ]
+    },
+    {
+      "id": "src/components/PhotoModal.jsx",
+      "path": "src/components/PhotoModal.jsx",
+      "lang": "jsx",
+      "summary": "import React from 'react' import { motion } from 'framer-motion' export default function PhotoModal({ src, alt, onClose, prev, next, hasPrev, hasNext }) { return ( <div className=\"photo-modal\" onClick={onClose}> <motion.div className=\"photo",
       "imports": [
         "react",
         "framer-motion"
       ],
       "exports": [
-        "OpeningScreen"
+        "PhotoModal"
       ]
     },
     {
@@ -243,7 +280,8 @@
         "specialReasons",
         "memories",
         "hiddenSurprises",
-        "wishes"
+        "wishes",
+        "images"
       ]
     },
     {
@@ -333,6 +371,21 @@
     },
     {
       "from": "src/components/MemoryReveal.jsx",
+      "to": "src/data/content.js",
+      "type": "imports"
+    },
+    {
+      "from": "src/components/OpeningScreen.jsx",
+      "to": "src/data/content.js",
+      "type": "imports"
+    },
+    {
+      "from": "src/components/PhotoGallery.jsx",
+      "to": "src/components/PhotoModal.jsx",
+      "type": "imports"
+    },
+    {
+      "from": "src/components/PhotoGallery.jsx",
       "to": "src/data/content.js",
       "type": "imports"
     },

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { memories as memoriesData } from '../data/content'
+import { memories as memoriesData, images } from '../data/content'
 
 export default function MemoryReveal({ onContinue }) {
   const [visible, setVisible] = useState(0)
@@ -11,6 +11,9 @@ export default function MemoryReveal({ onContinue }) {
       <div className="memory-box">
         <h4>{memoriesData[visible].title}</h4>
         <motion.p initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>{memoriesData[visible].text}</motion.p>
+        <motion.div className="memory-photo" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }}>
+          <img src={`/images/${images[visible]}`} alt={`Memory ${visible + 1}`} />
+        </motion.div>
         <div className="memory-actions">
           {visible < memoriesData.length - 1 ? (
             <button className="ghost-btn" onClick={() => setVisible(v => v + 1)}>There's More...</button>
