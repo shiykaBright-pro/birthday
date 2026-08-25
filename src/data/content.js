@@ -79,4 +79,5 @@ export const images = [
 ]
 
 // Configurable hero image for the opening box. Change this filename as needed.
-export const heroImage = images[0]
+// Use the specific image file `20250408_100520.jpg` as the opening box hero.
+export const heroImage = '20250408_100520.jpg'
