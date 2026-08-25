@@ -83,4 +83,5 @@ export const images = [
 export const heroImage = '20250408_100520.jpg'
 
 // Background image for the birthday message box (inside the text box)
-export const messageBgImage = 'IMG_20230731_104541_742.jpg'
+// Use img1 as the message box background
+export const messageBgImage = '20250408_100520.jpg'
