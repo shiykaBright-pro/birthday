@@ -81,3 +81,6 @@ export const images = [
 // Configurable hero image for the opening box. Change this filename as needed.
 // Use the specific image file `20250408_100520.jpg` as the opening box hero.
 export const heroImage = '20250408_100520.jpg'
+
+// Background image for the birthday message box (inside the text box)
+export const messageBgImage = 'IMG_20230731_104541_742.jpg'
