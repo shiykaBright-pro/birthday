@@ -28,6 +28,12 @@ section{background:rgba(255,255,255,0.02);padding:28px;border-radius:12px;margin
 .surprises-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
 .surprise-card{flex:1 1 200px;background:rgba(255,255,255,0.02);padding:18px;border-radius:10px;min-height:120px;display:flex;align-items:center;justify-content:center;cursor:pointer}
 .wish-card{padding:18px;text-align:center}
+.birthday-wishes .wish-card.prominent{padding:28px;border-radius:14px;background:linear-gradient(180deg, rgba(212,175,55,0.06), rgba(255,255,255,0.02));box-shadow:0 12px 30px rgba(2,6,23,0.6)}
+.birthday-wishes .wish-text{font-size:28px;margin:12px 0;color:var(--cream)}
+.birthday-wishes .wish-index{position:absolute;left:18px;top:12px;background:rgba(0,0,0,0.25);padding:6px 8px;border-radius:8px;font-weight:700}
+.birthday-wishes .wish-card.prominent{position:relative}
+.next-hint{margin-left:12px;color:var(--muted);font-size:14px}
+.next-hint p{margin:0}
 .final-surprise .final-prompt{text-align:center}
 .reveal-btn{background:transparent;border:2px solid var(--accent);color:var(--cream);padding:12px 18px;border-radius:12px;font-weight:700;cursor:pointer;margin-top:10px}
 .final-stage{text-align:center;padding:40px}

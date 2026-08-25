@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import NextHint from './NextHint'
 
 export default function IntroSection({ onContinue }) {
   return (
@@ -11,6 +12,7 @@ export default function IntroSection({ onContinue }) {
       <motion.button className="primary-btn" onClick={onContinue} whileHover={{ scale: 1.03 }}>
         Continue ❤️
       </motion.button>
+      <NextHint text="Next: Read the heartfelt message" />
     </section>
   )
 }

@@ -14,9 +14,15 @@ export default function MemoryReveal({ onContinue }) {
         </motion.div>
         <div className="memory-actions">
           {visible < memoriesData.length - 1 ? (
-            <button className="ghost-btn" onClick={() => setVisible(v => v + 1)}>There's More...</button>
+            <div style={{display:'flex',alignItems:'center',gap:12}}>
+              <button className="ghost-btn" onClick={() => setVisible(v => v + 1)}>There's More...</button>
+              <div className="muted">Tip: Tap "There's More..." to see the next memory</div>
+            </div>
           ) : (
-            <button className="primary-btn" onClick={onContinue}>Continue ❤️</button>
+            <div style={{display:'flex',alignItems:'center',gap:12}}>
+              <button className="primary-btn" onClick={onContinue}>Continue ❤️</button>
+              <div className="muted">Next: Discover hidden surprises</div>
+            </div>
           )}
         </div>
       </div>

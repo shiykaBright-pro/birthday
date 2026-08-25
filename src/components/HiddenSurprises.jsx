@@ -27,9 +27,10 @@ export default function HiddenSurprises({ onContinue }) {
           </motion.div>
         ))}
       </div>
-      <div style={{display:'flex',gap:12,marginTop:12}}>
+      <div style={{display:'flex',gap:12,marginTop:12,alignItems:'center'}}>
         <button className="primary-btn" onClick={() => setGalleryOpen(v => !v)}>{galleryOpen ? 'Close Gallery' : 'Open Gallery'}</button>
         <button className="primary-btn" onClick={onContinue}>See Wishes</button>
+        <div className="muted">Tip: Open the gallery to browse all photos</div>
       </div>
       {galleryOpen && (
         <div style={{marginTop:12}}>

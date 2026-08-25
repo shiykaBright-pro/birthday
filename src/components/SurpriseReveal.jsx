@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import NextHint from './NextHint'
 
 export default function SurpriseReveal({ onContinue }) {
   return (
@@ -23,6 +24,7 @@ export default function SurpriseReveal({ onContinue }) {
         <button className="ghost-btn" onClick={onContinue}>
           Continue ❤️
         </button>
+        <NextHint text="Next: Read a short introduction" />
       </motion.div>
     </section>
   )

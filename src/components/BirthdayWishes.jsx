@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { wishes as wishesData } from '../data/content'
+import NextHint from './NextHint'
 
 export default function BirthdayWishes({ onContinue }) {
   const [idx, setIdx] = useState(0)
@@ -8,9 +9,10 @@ export default function BirthdayWishes({ onContinue }) {
   return (
     <section className="birthday-wishes">
       <h3>My Wishes For You ❤️</h3>
-      <motion.div className="wish-card" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-        <h4>{wishesData[idx]}</h4>
-        <p className="muted">Tap to reveal the next wish</p>
+      <motion.div className="wish-card prominent" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <div className="wish-index">{idx + 1} / {wishesData.length}</div>
+        <h2 className="wish-text">{wishesData[idx]}</h2>
+        <p className="muted">Tap the button to reveal the next wish</p>
         <div className="wish-actions">
           {idx < wishesData.length - 1 ? (
             <button className="primary-btn" onClick={() => setIdx(i => i + 1)}>Reveal Next</button>
@@ -19,6 +21,7 @@ export default function BirthdayWishes({ onContinue }) {
           )}
         </div>
       </motion.div>
+      <NextHint text="Next: Reveal the final surprise when you're ready" />
     </section>
   )
 }

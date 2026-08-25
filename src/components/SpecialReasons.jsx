@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { specialReasons } from '../data/content'
 
+import NextHint from './NextHint'
+
 export default function SpecialReasons({ onContinue }) {
   const [active, setActive] = useState(null)
 
@@ -18,7 +20,10 @@ export default function SpecialReasons({ onContinue }) {
           </motion.div>
         ))}
       </div>
-      <button className="primary-btn" onClick={onContinue}>Show Memories ❤️</button>
+      <div style={{display:'flex',alignItems:'center',gap:12}}>
+        <button className="primary-btn" onClick={onContinue}>Show Memories ❤️</button>
+        <NextHint text="Next: Reveal shared memories" />
+      </div>
     </section>
   )
 }

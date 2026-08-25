@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import NextHint from './NextHint'
 import { birthdayMessage } from '../data/content'
 
 export default function BirthdayMessage({ onContinue }) {
@@ -14,6 +15,7 @@ export default function BirthdayMessage({ onContinue }) {
         ))}
       </motion.div>
       <motion.button className="ghost-btn" onClick={onContinue} whileHover={{ scale: 1.02 }}>Continue</motion.button>
+      <NextHint text="Next: See reasons why we celebrate you" />
     </section>
   )
 }
