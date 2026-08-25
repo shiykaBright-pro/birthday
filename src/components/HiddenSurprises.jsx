@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { hiddenSurprises } from '../data/content'
+import PhotoGallery from './PhotoGallery'
 
 export default function HiddenSurprises({ onContinue }) {
   const [revealed, setRevealed] = useState(hiddenSurprises.map(() => false))
+  const [galleryOpen, setGalleryOpen] = useState(false)
 
   return (
     <section className="hidden-surprises">
@@ -25,7 +27,15 @@ export default function HiddenSurprises({ onContinue }) {
           </motion.div>
         ))}
       </div>
-      <button className="primary-btn" onClick={onContinue}>See Wishes</button>
+      <div style={{display:'flex',gap:12,marginTop:12}}>
+        <button className="primary-btn" onClick={() => setGalleryOpen(v => !v)}>{galleryOpen ? 'Close Gallery' : 'Open Gallery'}</button>
+        <button className="primary-btn" onClick={onContinue}>See Wishes</button>
+      </div>
+      {galleryOpen && (
+        <div style={{marginTop:12}}>
+          <PhotoGallery />
+        </div>
+      )}
     </section>
   )
 }

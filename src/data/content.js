@@ -18,10 +18,11 @@ export const specialReasons = [
   { title: 'Your Presence', text: "Being with you makes ordinary days feel like blessings." }
 ]
 
+// Associate specific images from the `images` array to each memory.
 export const memories = [
-  { title: 'Memory #1', text: 'That fishing trip where we laughed the whole day.' },
-  { title: 'Memory #2', text: "The time you taught me to change a tire—your patience." },
-  { title: 'Memory #3', text: 'Sunday dinners and the stories you told.' }
+  { title: 'Memory #1', text: 'That fishing trip where we laughed the whole day.', image: images[0] },
+  { title: 'Memory #2', text: "The time you taught me to change a tire—your patience.", image: images[1] },
+  { title: 'Memory #3', text: 'Sunday dinners and the stories you told.', image: images[2] }
 ]
 
 export const hiddenSurprises = [

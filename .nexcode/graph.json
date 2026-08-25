@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-25T20:52:55.823Z",
+  "generatedAt": "2026-08-25T20:55:03.634Z",
   "workspaceRoot": "bd",
   "stats": {
     "filesIndexed": 23,
-    "edgesIndexed": 20
+    "edgesIndexed": 21
   },
   "nodes": [
     {
@@ -151,11 +151,12 @@
       "id": "src/components/HiddenSurprises.jsx",
       "path": "src/components/HiddenSurprises.jsx",
       "lang": "jsx",
-      "summary": "import React, { useState } from 'react' import { motion } from 'framer-motion' import { hiddenSurprises } from '../data/content' export default function HiddenSurprises({ onContinue }) { const [revealed, setRevealed] = useState(hiddenSurpri",
+      "summary": "import React, { useState } from 'react' import { motion } from 'framer-motion' import { hiddenSurprises } from '../data/content' import PhotoGallery from './PhotoGallery' export default function HiddenSurprises({ onContinue }) { const [reve",
       "imports": [
         "react",
         "framer-motion",
-        "../data/content"
+        "../data/content",
+        "./PhotoGallery"
       ],
       "exports": [
         "HiddenSurprises"
@@ -178,7 +179,7 @@
       "id": "src/components/MemoryReveal.jsx",
       "path": "src/components/MemoryReveal.jsx",
       "lang": "jsx",
-      "summary": "import React, { useState } from 'react' import { motion } from 'framer-motion' import { memories as memoriesData, images } from '../data/content' export default function MemoryReveal({ onContinue }) { const [visible, setVisible] = useState(",
+      "summary": "import React, { useState } from 'react' import { motion } from 'framer-motion' import { memories as memoriesData } from '../data/content' export default function MemoryReveal({ onContinue }) { const [visible, setVisible] = useState(0) retur",
       "imports": [
         "react",
         "framer-motion",
@@ -367,6 +368,11 @@
     {
       "from": "src/components/HiddenSurprises.jsx",
       "to": "src/data/content.js",
+      "type": "imports"
+    },
+    {
+      "from": "src/components/HiddenSurprises.jsx",
+      "to": "src/components/PhotoGallery.jsx",
       "type": "imports"
     },
     {
