@@ -20,9 +20,9 @@ export const specialReasons = [
 
 // Associate specific images from the `images` array to each memory.
 export const memories = [
-  { title: 'Memory #1', text: 'That fishing trip where we laughed the whole day.', image: images[0] },
-  { title: 'Memory #2', text: "The time you taught me to change a tire—your patience.", image: images[1] },
-  { title: 'Memory #3', text: 'Sunday dinners and the stories you told.', image: images[2] }
+  { title: 'Memory #1', text: 'That fishing trip where we laughed the whole day.', image: 'IMG_20230731_104541_742.jpg' },
+  { title: 'Memory #2', text: "The time you taught me to change a tire—your patience.", image: 'IMG_20230102_175803_035.jpg' },
+  { title: 'Memory #3', text: 'Sunday dinners and the stories you told.', image: 'IMG-20201225-WA0049.jpg' }
 ]
 
 export const hiddenSurprises = [
