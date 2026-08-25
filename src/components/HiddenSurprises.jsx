@@ -29,12 +29,15 @@ export default function HiddenSurprises({ onContinue }) {
       </div>
       <div style={{display:'flex',gap:12,marginTop:12,alignItems:'center'}}>
         <button className="primary-btn" onClick={() => setGalleryOpen(v => !v)}>{galleryOpen ? 'Close Gallery' : 'Open Gallery'}</button>
-        <button className="primary-btn" onClick={onContinue}>See Wishes</button>
         <div className="muted">Tip: Open the gallery to browse all photos</div>
       </div>
       {galleryOpen && (
         <div style={{marginTop:12}}>
           <PhotoGallery />
+          <div style={{display:'flex',gap:12,marginTop:12,alignItems:'center'}}>
+            <button className="primary-btn" onClick={onContinue}>See Wishes</button>
+            <div className="muted">Tip: After browsing, tap "See Wishes"</div>
+          </div>
         </div>
       )}
     </section>
