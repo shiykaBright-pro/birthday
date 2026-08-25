@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { hiddenSurprises } from '../data/content'
 import PhotoGallery from './PhotoGallery'
@@ -6,6 +6,20 @@ import PhotoGallery from './PhotoGallery'
 export default function HiddenSurprises({ onContinue }) {
   const [revealed, setRevealed] = useState(hiddenSurprises.map(() => false))
   const [galleryOpen, setGalleryOpen] = useState(false)
+  const wishesRef = useRef(null)
+
+  useEffect(() => {
+    if (galleryOpen) {
+      // give the gallery a moment to render, then smooth-scroll to the wishes button
+      const t = setTimeout(() => {
+        if (wishesRef.current) {
+          wishesRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+          wishesRef.current.focus && wishesRef.current.focus()
+        }
+      }, 150)
+      return () => clearTimeout(t)
+    }
+  }, [galleryOpen])
 
   return (
     <section className="hidden-surprises">
@@ -34,7 +48,7 @@ export default function HiddenSurprises({ onContinue }) {
       {galleryOpen && (
         <div style={{marginTop:12}}>
           <PhotoGallery />
-          <div style={{display:'flex',gap:12,marginTop:12,alignItems:'center'}}>
+          <div ref={wishesRef} tabIndex={-1} style={{display:'flex',gap:12,marginTop:12,alignItems:'center'}}>
             <button className="primary-btn" onClick={onContinue}>See Wishes</button>
             <div className="muted">Tip: After browsing, tap "See Wishes"</div>
           </div>
