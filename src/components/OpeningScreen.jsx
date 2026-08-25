@@ -1,11 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import { images } from '../data/content'
+import { heroImage } from '../data/content'
 
 export default function OpeningScreen({ onOpen }) {
-  // choose the first strong portrait-like image as hero (fallback to first)
-  const hero = images[0]
+  const hero = heroImage
 
   return (
     <div className="opening-screen">

@@ -77,3 +77,6 @@ export const images = [
   'IMG_20230717_101144_457.jpg',
   'IMG_20230731_104541_742.jpg'
 ]
+
+// Configurable hero image for the opening box. Change this filename as needed.
+export const heroImage = images[0]
