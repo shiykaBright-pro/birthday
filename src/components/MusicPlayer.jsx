@@ -18,7 +18,10 @@ export default function MusicPlayer() {
   return (
     <div className="music-player">
       <audio ref={audioRef} src="/assets/music.mp3" />
-      <button onClick={toggle} className="music-btn">{playing ? '⏸ Pause' : '▶ Play'}</button>
+      <button onClick={toggle} className="music-btn" aria-label={playing ? 'Pause music' : 'Play music'}>
+        <span className="icon">{playing ? '⏸' : '▶'}</span>
+        <span className="label">{playing ? 'Pause' : 'Play'}</span>
+      </button>
     </div>
   )
 }
