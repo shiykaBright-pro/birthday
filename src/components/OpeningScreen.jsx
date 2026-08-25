@@ -14,19 +14,21 @@ export default function OpeningScreen({ onOpen }) {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
         className="opening-box hero"
-        style={{ backgroundImage: `linear-gradient(rgba(7,10,20,0.45), rgba(7,10,20,0.45)), url(/images/${hero})` }}
       >
-        <h3 className="muted">A Little Surprise For Someone Very Special...</h3>
-        <h1>For Daddy <span className="heart">❤️</span></h1>
-        <p className="subtle">Tap below to open</p>
-        <motion.button
-          className="primary-btn"
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.98 }}
-          onClick={onOpen}
-        >
-          Open Surprise 🎁
-        </motion.button>
+        <img className="hero-img" src={`/images/${hero}`} alt="Hero" loading="eager" decoding="async" />
+        <div className="opening-content">
+          <h3 className="muted">A Little Surprise For Someone Very Special...</h3>
+          <h1>For Daddy <span className="heart">❤️</span></h1>
+          <p className="subtle">Tap below to open</p>
+          <motion.button
+            className="primary-btn"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            onClick={onOpen}
+          >
+            Open Surprise 🎁
+          </motion.button>
+        </div>
       </motion.div>
     </div>
   )

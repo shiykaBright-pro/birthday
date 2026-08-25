@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-25T20:55:03.634Z",
+  "generatedAt": "2026-08-25T20:58:35.333Z",
   "workspaceRoot": "bd",
   "stats": {
-    "filesIndexed": 23,
+    "filesIndexed": 24,
     "edgesIndexed": 21
   },
   "nodes": [
@@ -47,6 +47,18 @@
       "imports": [
         "vite",
         "@vitejs/plugin-react"
+      ],
+      "exports": []
+    },
+    {
+      "id": "scripts/optimize-images.js",
+      "path": "scripts/optimize-images.js",
+      "lang": "js",
+      "summary": "/** * Optional image optimizer using sharp. * * Usage: * 1. Install sharp locally: `npm install sharp` * 2. Run: `node scripts/optimize-images.js`",
+      "imports": [
+        "fs",
+        "path",
+        "sharp"
       ],
       "exports": []
     },

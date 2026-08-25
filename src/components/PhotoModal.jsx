@@ -8,7 +8,7 @@ export default function PhotoModal({ src, alt, onClose, prev, next, hasPrev, has
         <button className="modal-close" onClick={onClose}>✕</button>
         {hasPrev && <button className="modal-prev" onClick={prev}>‹</button>}
         {hasNext && <button className="modal-next" onClick={next}>›</button>}
-        <img src={src} alt={alt} />
+        <img src={src} alt={alt} loading="lazy" decoding="async" />
       </motion.div>
     </div>
   )

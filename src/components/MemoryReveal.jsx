@@ -12,7 +12,7 @@ export default function MemoryReveal({ onContinue }) {
         <h4>{memoriesData[visible].title}</h4>
         <motion.p initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>{memoriesData[visible].text}</motion.p>
         <motion.div className="memory-photo" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }}>
-          <img src={`/images/${memoriesData[visible].image}`} alt={`Memory ${visible + 1}`} />
+          <img src={`/images/${memoriesData[visible].image}`} alt={`Memory ${visible + 1}`} loading="lazy" decoding="async" />
         </motion.div>
         <div className="memory-actions">
           {visible < memoriesData.length - 1 ? (

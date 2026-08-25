@@ -16,7 +16,7 @@ export default function PhotoGallery() {
       <div className="grid">
         {images.map((img, i) => (
           <motion.div className="thumb" key={img} whileHover={{ scale: 1.03 }} onClick={() => open(i)}>
-            <img src={`/images/${img}`} alt={`Photo ${i+1}`} />
+            <img src={`/images/${img}`} alt={`Photo ${i+1}`} loading="lazy" decoding="async" />
           </motion.div>
         ))}
       </div>
